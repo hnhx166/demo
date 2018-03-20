@@ -1,0 +1,10 @@
+ant jar -Dversion=3.0.0 -Dhadoop.version=3.0.0 -Declipse.home=D:\\jee-oxygen2\\eclipse -Dhadoop.home=D:\\hadoop3\\  -debug
+
+命令参数说明：
+- Dhadoop.version: Hadoop的版本号。
+- Declipse.home： Eclipsed的安装目录。
+- Dhadoop.home： Hadoop的解压目录。
+- debug：显示编译过程中的信息。   
+
+hadoop 配置文件说明参考：
+http://blog.csdn.net/xuechongyang/article/details/8691518

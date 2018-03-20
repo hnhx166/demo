@@ -1,0 +1,22 @@
+
+	<!-- redis template definition p表示对该bean里面的属性进行注入，格式为p:属性名=注入的对象 效果与在bean里面使用<property>标签一样 -->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate"
+		p:connection-factory-ref="jedisConnectionFactory">
+		<!-- 序列化方式 建议key/hashKey采用StringRedisSerializer。 -->
+		<property name="keySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>
+		<property name="hashKeySerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.StringRedisSerializer" />
+		</property>
+		<property name="valueSerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+		<property name="hashValueSerializer">
+			<bean
+				class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+		</property>
+	</bean>

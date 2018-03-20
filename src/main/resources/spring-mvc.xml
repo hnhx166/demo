@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+	<context:component-scan base-package="vinux.service.api.center" />
+	<mvc:annotation-driven />
+	<mvc:resources location="/css/" mapping="/css/**"/> 
+	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="/images/" mapping="/images/**"/>
+	<mvc:resources location="/MP_verify_wCxELkUZPn1pjq5y.txt" mapping="/MP_verify_wCxELkUZPn1pjq5y.txt"/>
+	
+	<!-- 加载配置文件 -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:*.properties</value>
+				<value>classpath:*/*.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 注解 -->
+	<context:component-scan base-package="com.chnghx.web.*.controller" />
+	<!--配置文件加载路径 -->
+	<context:component-scan base-package="com.chnghx.web.common.properties" />
+	<bean id="springContextUtil" class="com.chnghx.web.common.SpringContextUtil"
+		scope="singleton" />
+		
+		
+	<!-- 视图解析器 -->
+	<!-- 配置freeMarker视图解析器 -->
+	<bean id="viewResolverFtl"
+		class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<!-- Freemarker 扩展，把相关属性加入进去。。。 -->
+		<property name="viewClass" value="com.chnghx.core.freemarker.FreeMarkerViewExtend" />
+		<property name="contentType" value="text/html; charset=utf-8" />
+		<property name="cache" value="true" />
+		<property name="suffix" value=".ftl" />
+		<property name="order" value="0" />
+	</bean>
+
+	<!-- 配置freeMarker -->
+	<bean id="freemarkerConfig"
+		class="com.chnghx.core.freemarker.FreeMarkerConfigExtend">
+		<property name="templateLoaderPath">
+			<value>/WEB-INF/views/</value>
+		</property>
+		<!-- <property name="freemarkerVariables" >
+			<map>
+				<entry key="xml_escape" value-ref="fmXmlEscape" />
+				<entry key="api" value-ref="api"/>
+			</map>
+		</property> -->
+		<property name="defaultEncoding">
+			<value>utf-8</value>
+		</property>
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="template_update_delay">0</prop>
+				<prop key="defaultEncoding">UTF-8</prop>
+				<prop key="url_escaping_charset">UTF-8</prop>
+				<prop key="locale">zh_CN</prop>
+				<prop key="boolean_format">true,false</prop>
+				<prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+				<prop key="date_format">yyyy-MM-dd</prop>
+				<prop key="time_format">HH:mm:ss</prop>
+				<prop key="number_format">0.######</prop>
+				<prop key="whitespace_stripping">true</prop>
+  				<prop key="auto_import">
+ 				/config/spring.ftl as s,
+  				/config/common_ftl.ftl as ftl,
+  				/config/utils.ftl as utils
+  				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+		<property name="maxUploadSize">
+			<value>32505856</value><!-- 上传文件大小限制为31M，31*1024*1024 -->
+		</property>
+		<property name="maxInMemorySize">
+			<value>4096</value>
+		</property>
+	</bean>
+	
+	<mvc:interceptors>
+		<!-- 标准APIResult返回方式 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/api/*/**" />
+			<bean class="com.chnghx.core.interceptor.RequestInterceptor" />
+		</mvc:interceptor>
+		<!-- IOS临时解决方案 -->
+		<mvc:interceptor>
+			<!-- 多个系统配置多个mapping -->
+			<mvc:mapping path="/vinuxcart/**" />
+			<bean class="com.chnghx.core.interceptor.MobileRequestInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	<!-- 初始化消费者
+	<bean id="initConsumer" class="vinux.service.core.mq.execute.InitConsumer"
+		scope="singleton" init-method="init" destroy-method="cleanup" />
+ -->
+
+
+	<!-- <bean id="messageConverters" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"> 
+		<property name="supportedMediaTypes"> <list> <value>application/json;charset=UTF-8</value> 
+		</list> </property> </bean> <bean id="handlerAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"> 
+		<property name="cacheSeconds" value="0" /> <property name="messageConverters" 
+		ref="messageConverters" /> </bean> -->
+	<!-- 设置自定义异常处理 <bean id="handlerExceptionResolver" class="vinux.service.api.center.common.AnnotationHandlerMethodExceptionResolver"> 
+		<property name="defaultErrorView" value="error.jsp" /> <property name="messageConverters" 
+		ref="messageConverters" /> </bean> -->
+</beans>
