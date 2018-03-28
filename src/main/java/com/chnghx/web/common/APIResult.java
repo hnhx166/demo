@@ -3,21 +3,17 @@ package com.chnghx.web.common;
 import java.io.Serializable;
 /**
  * 
- * 开发公司：九樱天下<br/>
- * 版权：九樱天下<br/>
- * <p>
- * 
- * <p>
- * 
- * 区分　责任人　日期　　　　说明<br/>
- * 创建　周柏成　2015年1月22日 　<br/>
- * <p>
- * 调用公共接口返回的结果集
- * <p>
- * @author zhou-baicheng
- * 
- * @version 1.0,2015年1月22日 <br/>
- * 
+*    
+* 项目名称：demo   
+* 类名称：APIResult   
+* 类描述：   调用公共接口返回的结果集
+* 创建人：guohaixiang  
+* 创建时间：2018年3月28日 下午3:46:33   
+* 修改人：Administrator   
+* 修改时间：2018年3月28日 下午3:46:33   
+* 修改备注：   
+* @version 1.0
+*
  */
 public class APIResult<V> implements Serializable{
 	

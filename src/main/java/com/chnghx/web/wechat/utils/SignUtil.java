@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.chnghx.web.common.utils.VinuxPostMethod;
+import com.chnghx.web.common.utils.VPostMethod;
 
 import net.sf.json.JSONObject;
 

@@ -1,24 +1,6 @@
 package com.chnghx.web.common.utils;
 
 import org.apache.log4j.Logger;
-/**
- * 
- * 开发公司：九樱天下<br/>
- * 版权：九樱天下<br/>
- * <p>
- * 
- * <p>
- * 
- * 区分　责任人　日期　　　　说明<br/>
- * 创建　周柏成　2014年7月30日 　<br/>
- * <p>
- * Logger 工具类
- * <p>
- * @author zhou-baicheng
- * 
- * @version 1.0,2014年7月30日 <br/>
- * 
- */
 public class LoggerUtils {
 	/**
 	 * 是否开启Debug

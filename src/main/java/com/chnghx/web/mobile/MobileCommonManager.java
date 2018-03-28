@@ -9,7 +9,7 @@ import com.chnghx.web.common.APIServiceLog;
 import com.chnghx.web.common.statics.Constant;
 import com.chnghx.web.common.utils.APIServiceLogUitls;
 import com.chnghx.web.common.utils.LoggerUtils;
-import com.chnghx.web.common.utils.VinuxPostMethod;
+import com.chnghx.web.common.utils.VPostMethod;
 
 public class MobileCommonManager {
 
@@ -19,7 +19,7 @@ public class MobileCommonManager {
 		log.setClientModule(clientModule);
 		try {
 			Map<String, Object> params = log.getClientParam();
-			VinuxPostMethod postMethod = new VinuxPostMethod(log.getServerUrl());
+			VPostMethod postMethod = new VPostMethod(log.getServerUrl());
 			postMethod.setParameter(params);
 			//从member获取数据
 			Object data = postMethod.syncExecuteMethod(request);

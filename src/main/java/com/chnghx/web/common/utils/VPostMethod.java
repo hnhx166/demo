@@ -1,7 +1,6 @@
 package com.chnghx.web.common.utils;
 
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -16,31 +15,10 @@ import org.apache.commons.httpclient.params.HttpClientParams;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 
 import com.chnghx.web.common.APIServiceLog;
-import com.chnghx.web.common.config.Config;
 import com.chnghx.web.common.statics.Constant;
 
 
-
-/**
- * 
- * 开发公司：九樱天下<br/>
- * 版权：九樱天下<br/>
- * <p>
- * 
- * <p>
- * 
- * <p>
- * 
- * Vinux PostMethod
- * 
- * <p>
- * 
- * @author ghx
- * 
- * 
- * 
- */
-public class VinuxPostMethod extends PostMethod {
+public class VPostMethod extends PostMethod {
 
 	//自定义请求头信息
 	private Map<String,String> head = new LinkedHashMap<String, String>();
@@ -98,14 +76,14 @@ public class VinuxPostMethod extends PostMethod {
 			}else{
 				apiLog.setServerCode(Constant.SERVER_ERROR_API);
 				RuntimeException  ex=new RuntimeException("请求服务端错误, syncExecuteMethod(HttpServletRequest request)！HTTP_CODE : " + status);
-				LoggerUtils.error(VinuxPostMethod.class, "请求服务端错误, syncExecuteMethod(HttpServletRequest request)！HTTP_CODE : " + status, ex);
+				LoggerUtils.error(VPostMethod.class, "请求服务端错误, syncExecuteMethod(HttpServletRequest request)！HTTP_CODE : " + status, ex);
 				throw ex;
 				
 			}
 		}catch (Exception e) {
 			apiLog.setServerException(APIServiceLogUitls.buildExceptionStack(e));
 			apiLog.setServerCode(Constant.SERVER_ERROR_API);
-			LoggerUtils.error(VinuxPostMethod.class, "接口中心syncExecuteMethod(HttpServletRequest request)处理请求发送异常！", e);
+			LoggerUtils.error(VPostMethod.class, "接口中心syncExecuteMethod(HttpServletRequest request)处理请求发送异常！", e);
 			throw e;
 		}finally{
 			apiLog.setServerEndTime(System.currentTimeMillis());
@@ -167,13 +145,13 @@ public class VinuxPostMethod extends PostMethod {
 			}else{
 				apiLog.setServerCode(Constant.SERVER_ERROR_API);
 				RuntimeException  ex=new RuntimeException("请求服务端错误,asyncExecuteMethod(APIServiceLog apiLog)！HTTP_CODE : " + status);
-				LoggerUtils.error(VinuxPostMethod.class, "请求服务端错误,asyncExecuteMethod(APIServiceLog apiLog)！HTTP_CODE : " + status, ex);
+				LoggerUtils.error(VPostMethod.class, "请求服务端错误,asyncExecuteMethod(APIServiceLog apiLog)！HTTP_CODE : " + status, ex);
 				throw ex;
 			}
 		}catch (Exception e) {
 			apiLog.setServerException(APIServiceLogUitls.buildExceptionStack(e));
 			apiLog.setServerCode(Constant.SERVER_ERROR_API);
-			LoggerUtils.error(VinuxPostMethod.class, "接口中心asyncExecuteMethod(APIServiceLog apiLog)处理请求发送异常！", e);
+			LoggerUtils.error(VPostMethod.class, "接口中心asyncExecuteMethod(APIServiceLog apiLog)处理请求发送异常！", e);
 			throw e;
 		}finally{
 			apiLog.setServerEndTime(System.currentTimeMillis());
@@ -230,14 +208,14 @@ public class VinuxPostMethod extends PostMethod {
 			}else{
 				apiLog.setNotifyCode(Constant.CLIENT_ERROR_API);
 				RuntimeException  ex=new RuntimeException("回调客户端状态错误, notifyExecuteMethod(APIServiceLog apiLog)！HTTP_CODE:" + status);
-				LoggerUtils.error(VinuxPostMethod.class, "回调客户端状态错误, notifyExecuteMethod(APIServiceLog apiLog)！HTTP_CODE:" + status, ex);
+				LoggerUtils.error(VPostMethod.class, "回调客户端状态错误, notifyExecuteMethod(APIServiceLog apiLog)！HTTP_CODE:" + status, ex);
 				throw ex;
 				
 			}
 		}catch (Exception e) {
 			apiLog.setServerException(APIServiceLogUitls.buildExceptionStack(e));
 			apiLog.setNotifyCode(Constant.CLIENT_ERROR_API);
-			LoggerUtils.error(VinuxPostMethod.class, "接口中心executeMethod(APIServiceLog apiLog)回调客户端请求发送异常！", e);
+			LoggerUtils.error(VPostMethod.class, "接口中心executeMethod(APIServiceLog apiLog)回调客户端请求发送异常！", e);
 //			throw e;
 		}finally{
 			apiLog.setNotifyEndTime(System.currentTimeMillis());
@@ -348,16 +326,16 @@ public class VinuxPostMethod extends PostMethod {
 	// public VinuxPostMethod() {
 	// super();
 	// }
-	public VinuxPostMethod(String url) {
+	public VPostMethod(String url) {
 		super(url);
 	}
 
-	public VinuxPostMethod(List<Map<String, Object>> parameter) {
+	public VPostMethod(List<Map<String, Object>> parameter) {
 		super();
 		this.setParameter(parameter);
 	}
 
-	public VinuxPostMethod(String url, List<Map<String, Object>> parameter) {
+	public VPostMethod(String url, List<Map<String, Object>> parameter) {
 		super(url);
 		this.setParameter(parameter);
 	}
@@ -367,13 +345,13 @@ public class VinuxPostMethod extends PostMethod {
 //		this.setJSONParameter(parameter);
 //	}
 
-	public VinuxPostMethod(Map<String, Object> parameter) {
+	public VPostMethod(Map<String, Object> parameter) {
 		super();
 		paramsMap = parameter;
 		this.setParameter(parameter);
 	}
 
-	public VinuxPostMethod(String url, Map<String, Object> parameter) {
+	public VPostMethod(String url, Map<String, Object> parameter) {
 		super(url);
 		paramsMap = parameter;
 		this.setParameter(parameter);

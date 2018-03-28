@@ -15,7 +15,7 @@ import com.chnghx.web.common.config.jd.JdConfig;
 import com.chnghx.web.common.statics.Constant;
 import com.chnghx.web.common.utils.APIServiceLogUitls;
 import com.chnghx.web.common.utils.LoggerUtils;
-import com.chnghx.web.common.utils.VinuxPostMethod;
+import com.chnghx.web.common.utils.VPostMethod;
 import com.chnghx.web.jd.JdSign;
 
 public class JdCommonManager {
@@ -26,7 +26,7 @@ public class JdCommonManager {
 		log.setClientModule(clientModule);
 		try {
 //			Map<String, Object> params = log.getClientParam();
-			VinuxPostMethod postMethod = new VinuxPostMethod(log.getServerUrl());
+			VPostMethod postMethod = new VPostMethod(log.getServerUrl());
 			postMethod.setParameter(params);
 			//从member获取数据
 			Object data = postMethod.syncExecuteMethod(request);
