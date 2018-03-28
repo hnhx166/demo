@@ -2,10 +2,6 @@ package com.chnghx.web.wx.util;
 
 public class WeChatUtil {
 	
-	
-	
-	
-	
 	public static byte[] convertHexString(String ss) {
 		byte digest[] = new byte[ss.length() / 2];
 		for (int i = 0; i < digest.length; i++) {
