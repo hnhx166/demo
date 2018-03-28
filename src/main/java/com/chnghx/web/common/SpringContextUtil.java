@@ -32,7 +32,6 @@ public class SpringContextUtil implements ApplicationContextAware,
 		servletContext = context;
 	}
 	
-	
 	public static <T> T getBean(String name, Class<T> requiredType) {
 		try {
 			return applicationContext.getBean(name, requiredType);

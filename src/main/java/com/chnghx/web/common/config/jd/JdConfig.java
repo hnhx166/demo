@@ -6,8 +6,6 @@ import java.util.Properties;
 import com.chnghx.web.common.config.MemberConfig;
 import com.chnghx.web.common.utils.LoggerUtils;
 
-
-
 public class JdConfig {
 
 	/**

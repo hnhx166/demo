@@ -5,7 +5,6 @@ import java.util.Properties;
 
 import com.chnghx.web.common.utils.LoggerUtils;
 
-
 public class AgedcareConfig {
 
 	/**

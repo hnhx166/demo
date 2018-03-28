@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.chnghx.web.common.VCache;
-
 public class SerializeUtil {
 
     public static byte[] serialize(Object value) {

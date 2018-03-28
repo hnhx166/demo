@@ -3,7 +3,6 @@ package com.chnghx.web.common.config.mobile;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.chnghx.web.common.VCache;
 import com.chnghx.web.common.config.MemberConfig;
 import com.chnghx.web.common.utils.LoggerUtils;
 

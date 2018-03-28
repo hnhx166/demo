@@ -13,7 +13,6 @@ import net.sf.json.JSONObject;
 
 public class BaseController {
 	
-//	private  ObjectMapper mapper = new ObjectMapper(); //转换器  
 	public void displayJSON(Object data, HttpServletResponse response) {
 		//必须放到上边
 		response.setCharacterEncoding("UTF-8");

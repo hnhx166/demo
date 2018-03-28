@@ -17,8 +17,6 @@ import com.chnghx.web.common.APIResult;
 import com.chnghx.web.common.BaseController;
 import com.chnghx.web.common.VCache;
 
-
-
 @Controller
 @RequestMapping("common")
 public class CommonController extends BaseController{

@@ -21,8 +21,6 @@ import org.apache.commons.httpclient.ConnectTimeoutException;
 import org.apache.commons.httpclient.params.HttpConnectionParams;
 import org.apache.commons.httpclient.protocol.ProtocolSocketFactory;
 
-import com.chnghx.web.common.VCache;
-
 public class SSLProtocolSocketFactory implements ProtocolSocketFactory{
 
 	private SSLContext sslcontext = null;

@@ -5,9 +5,6 @@ import java.util.Map;
 
 public class APIServiceLog implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -8307071952649389309L;
 
 	/** 一 ：客户端请求参数#######################################################################

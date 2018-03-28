@@ -7,7 +7,6 @@ import com.chnghx.core.mq.bo.MqEntity;
 import com.chnghx.core.mq.publics.MqPublicInfo;
 import com.chnghx.web.common.APIServiceLog;
 
-
 public class APIServiceLogUitls {
 
 	/**

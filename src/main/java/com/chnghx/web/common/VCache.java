@@ -15,7 +15,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 import com.chnghx.web.common.utils.LoggerUtils;
 
-
 public final class VCache {
 
 	static RedisTemplate<String, Object> redisTemplate;

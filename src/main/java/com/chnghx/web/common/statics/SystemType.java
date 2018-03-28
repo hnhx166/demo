@@ -99,8 +99,6 @@ public abstract class SystemType {
 
 	static final String SYSTEM_VINUXPOST_JD="vinuxpost_jd";
 	
-	
-	
 	//接口中心处理请求的处理方式
 	public static final String API_PROCESS_SYNC="sync";  // 同步处理,请求完直接返回数据
 	public static final String API_PROCESS_CACHE="cache"; //同步加缓存处理,非实时业务，控制好时间
@@ -167,9 +165,5 @@ public abstract class SystemType {
 		CACHE_MAP.put(API_PROCESS_SYNC, API_PROCESS_SYNC);
 		CACHE_MAP.put(API_PROCESS_CACHE, API_PROCESS_CACHE);
 		CACHE_MAP.put(API_PROCESS_ASYNC, API_PROCESS_ASYNC);
-		
 	}
-	
-	
-	
 }

@@ -17,7 +17,6 @@ import org.apache.commons.httpclient.params.HttpMethodParams;
 import com.chnghx.web.common.APIServiceLog;
 import com.chnghx.web.common.statics.Constant;
 
-
 public class VPostMethod extends PostMethod {
 
 	//自定义请求头信息
@@ -37,11 +36,6 @@ public class VPostMethod extends PostMethod {
 		APIServiceLog apiLog = (APIServiceLog)request.getAttribute("api_log");
 		String result = null;
 		try {
-			//host
-			apiLog.setApiHost("api.vinux.com");
-			
-			//服务端请求URL
-//			apiLog.setServerUrl(getPath());
 			apiLog.setServerHead(null);
 			apiLog.setServerStartTime(System.currentTimeMillis());
 			HttpClient client = new HttpClient();
@@ -94,7 +88,6 @@ public class VPostMethod extends PostMethod {
 		return result;
 	}
 	
-	
 	/***
 	 * 
 	 * 异步执行方法
@@ -107,8 +100,6 @@ public class VPostMethod extends PostMethod {
 	public String asyncExecuteMethod(APIServiceLog apiLog) throws Exception {
 		String result = null;
 		try {
-			//host
-			apiLog.setApiHost("api.vinux.com");
 			//接口中心处理请求方式(sync：同步处理, cache:同步加缓存处理,async：异步处理 )
 //			apiLog.setProcessMode("sync");
 			//服务端请求URL
@@ -170,16 +161,9 @@ public class VPostMethod extends PostMethod {
 	public String notifyExecuteMethod(APIServiceLog apiLog) {
 		String result = null;
 		try {
-			//host
-//			apiLog.setApiHost("api.vinux.com");
-			
-			//服务端请求URL
-//			apiLog.setServerUrl(getPath());
-//			apiLog.setServerHead(null);
 			apiLog.setNotifyStartTime(System.currentTimeMillis());
 			HttpClient client = new HttpClient();
 			HttpClientParams params = client.getParams();
-			
 			//回调客户端参数，该参数由MQ处理完数据后提供
 			apiLog.setNotifyParam(paramsMap);
 			params.setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "UTF-8");
@@ -238,33 +222,6 @@ public class VPostMethod extends PostMethod {
 		}
 	}
 
-//	/**
-//	 * 设置参数JSONObject
-//	 * 
-//	 * @param parameter
-//	 */
-//	public void setJSONParameter(JSONObject parameter) {
-//		for (Iterator<?> iter = parameter.keys(); iter.hasNext();) {
-//			String key = (String) iter.next();
-//			Object str = parameter.get(key);
-//			String value = null == str ? "" : StringUtils.trimToEmpty(str
-//					.toString());
-//			this.addParameter(key,value);
-//		}
-//	}
-//
-//	/**
-//	 * 设置参数JSONArray
-//	 * 
-//	 * @param parameter
-//	 */
-//	public void setJSONArrayParameter(JSONArray parameter) {
-//		for (Object object : parameter) {
-//			JSONObject jsonObject = (JSONObject) object;
-//			this.setJSONParameter(jsonObject);
-//		}
-//	}
-
 	/**
 	 * 设置通用参数Map<String, Object>
 	 * 
@@ -282,50 +239,6 @@ public class VPostMethod extends PostMethod {
 		}
 	}
 	
-	/**
-	 * 设置member参数
-	 * @param parameter
-	 * @throws Exception 
-	 */
-//	public void setMemberParameter(Map<String, Object> parameter) throws Exception {
-//		if(null != parameter){
-//			//系统类型
-//			parameter.put("sys_type", Config.getProperty("api_system_type"));
-//			String paramStr = "";
-//			for (String key : parameter.keySet()) {
-//				if(!"sync".equals(key) && !"cache_time".equals(key)){
-//					Object str = parameter.get(key);
-//					String value = null == str ? "" : str.toString().trim();
-//					paramsMap.put(key, value);
-//					paramStr+= key + "=" + value + "&";
-//					this.addParameter(key, value);
-//				}
-//			}
-//			
-//			//参数排序
-//			String [] params = paramStr.split("&");
-//			Arrays.sort(params);
-//			
-//			//排序后组合
-//			String signStr = "";
-//			for (int i = 0; i < params.length; i++) {
-//				signStr += params[i] + "&";
-//			}
-//			//获取key
-//			signStr += Config.getProperty("member_sign");
-//			//生成md5签名
-//			String sign = MD5.md5Digest(signStr);
-//			//签名作为参数
-//			this.addParameter("sign", sign);
-//		}
-//	}
-
-	/**
-	 * 构造方法begin
-	 */
-	// public VinuxPostMethod() {
-	// super();
-	// }
 	public VPostMethod(String url) {
 		super(url);
 	}
@@ -340,11 +253,6 @@ public class VPostMethod extends PostMethod {
 		this.setParameter(parameter);
 	}
 
-//	public VinuxPostMethod(JSONObject parameter) {
-//		super();
-//		this.setJSONParameter(parameter);
-//	}
-
 	public VPostMethod(Map<String, Object> parameter) {
 		super();
 		paramsMap = parameter;
@@ -356,27 +264,6 @@ public class VPostMethod extends PostMethod {
 		paramsMap = parameter;
 		this.setParameter(parameter);
 	}
-
-//	public VinuxPostMethod(String url, JSONObject parameter) {
-//		super(url);
-//		this.setJSONParameter(parameter);
-//	}
-//
-//	public VinuxPostMethod(JSONArray parameter) {
-//		super();
-//		this.setJSONArrayParameter(parameter);
-//	}
-//
-//	public VinuxPostMethod(String url, JSONArray parameter) {
-//		super(url);
-//		this.setJSONArrayParameter(parameter);
-//	}
-	
-	
-	/**
-	 * 构造方法end
-	 */
-	
 
 	public Map<String, String> getHead() {
 		return head;
@@ -393,26 +280,4 @@ public class VPostMethod extends PostMethod {
 	public void setTimeOut(int timeOut) {
 		this.timeOut = timeOut;
 	}
-	
-	
-	
-//	public JsonConfig getConfig() {
-//		JsonConfig config = new JsonConfig();
-//		// 实现属性过滤器接口并重写apply()方法
-//		PropertyFilter pf = new PropertyFilter() {
-//			@Override
-//			// 返回true则跳过此属性，返回false则正常转换
-//			public boolean apply(Object source, String name, Object value) {
-//				if (StringUtils.isBlank(value)) {
-//					return true;
-//				}
-//				return false;
-//			}
-//		};
-//		// 将过滤器放入json-config中
-//		config.setJsonPropertyFilter(pf);
-//
-//		return config;
-//	}
-
 }

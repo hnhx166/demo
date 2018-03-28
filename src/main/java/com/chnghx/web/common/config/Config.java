@@ -3,7 +3,6 @@ package com.chnghx.web.common.config;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.chnghx.web.common.VCache;
 import com.chnghx.web.common.utils.LoggerUtils;
 
 public class Config {

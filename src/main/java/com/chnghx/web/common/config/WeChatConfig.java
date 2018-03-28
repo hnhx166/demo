@@ -3,12 +3,10 @@ package com.chnghx.web.common.config;
 import java.io.IOException;
 import java.util.Properties;
 
-import com.chnghx.web.common.VCache;
 import com.chnghx.web.common.utils.LoggerUtils;
 
 /**
  * 
-*    
 * 项目名称：demo   
 * 类名称：WeChatConfig   
 * 类描述：   

@@ -7,9 +7,6 @@ import java.util.Map;
 public interface Constant {
 	
 	static Map<String, String> SYSTEM_ = new HashMap<String, String>();
-	
-	
-	
 	final long CACHE_1min = 60l; 
 	final long CACHE_2min = 120l;
 	final long CACHE_3min = 180l;

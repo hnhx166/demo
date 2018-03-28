@@ -1,6 +1,5 @@
 package com.chnghx.web.common.utils;
 
-
 import javax.servlet.http.HttpServletRequest;
 
 public class DomainUtil {

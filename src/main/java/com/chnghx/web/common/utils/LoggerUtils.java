@@ -18,7 +18,6 @@ public class LoggerUtils {
 		logger.debug(message);
 	}
 	
-	
 	/**
 	 * Debug 输出
 	 * @param clazz  	目标.Class

@@ -3,7 +3,6 @@ package com.chnghx.web.common;
 import java.io.Serializable;
 /**
  * 
-*    
 * 项目名称：demo   
 * 类名称：APIResult   
 * 类描述：   调用公共接口返回的结果集
