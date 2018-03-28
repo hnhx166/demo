@@ -15,12 +15,6 @@ import java.util.Map;
 import com.chnghx.web.common.config.jd.JdConfig;
 import com.chnghx.web.common.utils.MD5;
 
-/**
- * <一句话功能简述>
- *
- * @author  贾瑞丰
- *@date  [2017年6月7日]
- */
 public class JdSign {
 
 	/**

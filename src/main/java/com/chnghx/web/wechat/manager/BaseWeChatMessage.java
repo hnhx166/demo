@@ -1,18 +1,5 @@
 package com.chnghx.web.wechat.manager;
-/**
- * 
- * 
- *开发公司：九樱天下（北京）信息技术有限公司
- *版权：九樱天下（北京）信息技术有限公司
- * @author lubaohui@vitapollo.com
- * 
- *@BaseWeChatMessage.java
- *@2018年1月2日
- *@下午2:41:14
- *
- *
- *说明：消息父类
- */
+
 public class BaseWeChatMessage {
 	/**
 	 * 开发者微信号

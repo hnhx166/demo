@@ -11,34 +11,14 @@ import com.chnghx.core.mq.publics.MqPublicInfo;
 import com.chnghx.web.common.APIResult;
 import com.chnghx.web.common.BaseController;
 import com.chnghx.web.common.statics.Constant;
-/**
- * 
- * 开发公司：九樱天下<br/>
- * 版权：九樱天下<br/>
- * <p>
- * 
- * <p>
- * 
- * 区分　责任人　日期　　　　说明<br/>
- * 创建　周柏成　2016年11月23日 　<br/>
- * <p>
- *
- * 樱桃铺消息推送接收
- *
- * <p>
- * @author zhou-baicheng
- * @email  i@itboy.net
- * @version 1.0,2016年11月23日 <br/>
- * 
- */
+
 @Controller
 @RequestMapping("vinuxstore/{clientId}")
 public class VinuxstoreInputCoreController extends BaseController {
 
-	
 	/**
 	 * 消息推送。
-	 * @author zhou-baicheng
+	 * 
 	 * @return
 	 * @throws Exception 
 	 */

@@ -6,9 +6,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSONObject;
-
-import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,27 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.chnghx.web.common.BaseController;
-import com.chnghx.web.common.VCache;
-import com.chnghx.web.common.config.Config;
-import com.chnghx.web.wechat.manager.IMGEMessage;
-import com.chnghx.web.wechat.manager.TextMessage;
-import com.chnghx.web.wechat.utils.ReadFile;
 import com.chnghx.web.wechat.utils.SignUtil;
-import com.chnghx.web.wechat.utils.WeChatButtonUtil;
 import com.chnghx.web.wechat.utils.WeChatMessageKeyUtil;
 import com.chnghx.web.wechat.utils.WeChatMessageUtil;
-import com.chnghx.web.wechat.utils.WeChatTextBusiness;
-/**
- * 
- *开发公司：九樱天下（北京）信息技术有限公司
- *版权：九樱天下（北京）信息技术有限公司
- * @author lubaohui@bizviva.com
- *
- *2017年12月21日 下午3:31:17
- *WXController.java
- *
- *说明：
- */
+
 @Controller
 @RequestMapping("wechatToken")
 public class WeChatController extends BaseController{

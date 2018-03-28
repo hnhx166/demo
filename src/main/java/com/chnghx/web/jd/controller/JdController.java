@@ -25,13 +25,6 @@ import com.chnghx.web.jd.JdSign;
 import com.chnghx.web.jd.manager.JdCommonManager;
 
 
-/**
-* <一句话功能简述>
-*
-* @author  贾瑞丰
-*@date  [2017年6月6日]
-*/
-
 @Scope("singleton")
 @RequestMapping("api/jd")
 @RestController

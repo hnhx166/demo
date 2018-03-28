@@ -1,22 +1,15 @@
 package com.chnghx.web.jd.manager;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.chnghx.test.ClientPostMethod;
 import com.chnghx.web.common.APIResult;
 import com.chnghx.web.common.APIServiceLog;
-import com.chnghx.web.common.VCache;
-import com.chnghx.web.common.config.jd.JdConfig;
 import com.chnghx.web.common.statics.Constant;
 import com.chnghx.web.common.utils.APIServiceLogUitls;
 import com.chnghx.web.common.utils.LoggerUtils;
 import com.chnghx.web.common.utils.VPostMethod;
-import com.chnghx.web.jd.JdSign;
 
 public class JdCommonManager {
 
@@ -47,29 +40,4 @@ public class JdCommonManager {
 		}
 	}
 	
-//	private static String getToken(){
-//		Object res=VCache.get("jd_token");
-//		if(res==null){
-//			Map<String,Object> map=new HashMap<String,Object>();
-//			map.put("grant_type", "access_token");
-//			map.put("client_id", JdConfig.CLIENT_ID);
-//			map.put("client_secret", JdConfig.CLIENT_SECRET);
-//			map.put("timestamp", timestamp());
-//			map.put("username", JdConfig.USERNAME);
-//			map.put("password", JdConfig.PASSWORD);//加密一次
-//			map.put("scope", "");
-//			
-//			map.put("sign", JdSign.getAccessTokeSign(map));
-//			ClientPostMethod clientPostMethod=new ClientPostMethod(JdConfig.getUrlProperty("accessToken"), map);
-//			res=clientPostMethod.executeMethod();
-//			System.out.println(res);
-//			VCache.put("jd_token", res, 12*3600);
-//		}
-//		return  res.toString();
-//	}
-//	
-//	private static String timestamp(){
-//		SimpleDateFormat time=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); 
-//		return time.format(new Date());
-//	}
 }

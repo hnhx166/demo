@@ -68,7 +68,6 @@ public class WeChatVipcnController extends BaseController {
 	
 	/**
 	 * 上传素材
-	 * http://www.vitahelper.com/wechatVipcn/uploadPermanentMaterial.vhtml?material=image&fileName=image\APP.png
 	 * 
 	 * material:素材类型
 	 * fileName:素材所在项目位置，系统默认在h5目录下，可自行添加子目录

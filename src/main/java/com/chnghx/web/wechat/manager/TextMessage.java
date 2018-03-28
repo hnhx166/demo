@@ -1,15 +1,6 @@
 package com.chnghx.web.wechat.manager;
 /**
  * 
- * 
- *开发公司：九樱天下（北京）信息技术有限公司
- *版权：九樱天下（北京）信息技术有限公司
- * @author lubaohui@vitapollo.com
- * 
- *@TextMessage.java
- *@2018年1月2日
- *@下午2:00:04
- *
  *说明：文本格式
  <xml>
     <ToUserName>< ![CDATA[toUser] ]>
