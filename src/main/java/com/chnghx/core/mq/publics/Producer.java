@@ -7,12 +7,6 @@ import com.chnghx.web.common.utils.SerializeUtil;
 import com.chnghx.web.common.utils.StringUtils;
 import com.rabbitmq.client.MessageProperties;
 
-/**
- * The producer endpoint that writes to the queue.
- * 
- * @author tongchuanwei
- * 
- */
 public class Producer extends EndPoint implements Runnable {
 
 	protected Object obj;

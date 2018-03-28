@@ -8,13 +8,6 @@ import java.util.concurrent.Executors;
 import com.chnghx.core.mq.bo.MqEntity;
 
 
-/**
- * MQ公共入口,调用时生产者和消费者一起处理
- * 
- * @author tongchuanwei
- * 
- * 
- */
 public class MqPublicInfo {
 
 	// 1：指定队列名称生产和消费消息

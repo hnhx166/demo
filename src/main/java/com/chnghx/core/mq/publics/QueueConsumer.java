@@ -9,12 +9,6 @@ import com.rabbitmq.client.Consumer;
 import com.rabbitmq.client.Envelope;
 import com.rabbitmq.client.ShutdownSignalException;
 
-/**
- * 读取队列的程序端，实现了Runnable接口。
- * 
- * @author tongchuanwei
- * 
- */
 public class QueueConsumer extends EndPoint implements Runnable, Consumer {
 
 	public QueueConsumer(String queueName) {

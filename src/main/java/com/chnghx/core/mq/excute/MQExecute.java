@@ -10,24 +10,6 @@ import com.chnghx.web.common.utils.APIServiceLogUitls;
 import com.chnghx.web.common.utils.LoggerUtils;
 import com.chnghx.web.common.utils.SerializeUtil;
 
-/**
- * 
- * 开发公司：九樱天下<br/>
- * 版权：九樱天下<br/>
- * <p>
- * 	队列开放出口
- * <p>
- * 
- * 区分　责任人　日期　　　　说明<br/>
- * 创建　chuanwei　2016年11月30日 　<br/>
- * <p>
- * *******
- * <p>
- * @author zhou-baicheng
- * 
- * @version 1.0,2015年6月2日 <br/>
- * 
- */
 public class MQExecute implements Serializable{
 	private static final long serialVersionUID = 5669902966340931851L;
 
