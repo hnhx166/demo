@@ -3,18 +3,24 @@
 	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context-3.0.xsd 
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 	http://www.springframework.org/schema/mvc 
-	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
-	<context:component-scan base-package="vinux.service.api.center" />
+	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+	http://www.springframework.org/schema/websocket
+    http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd
+	">
+	
 	<mvc:annotation-driven />
 	<mvc:resources location="/css/" mapping="/css/**"/> 
 	<mvc:resources location="/js/" mapping="/js/**"/>
 	<mvc:resources location="/images/" mapping="/images/**"/>
+	<mvc:resources location="/" mapping="/**.ico"/>
+	<mvc:resources location="/" mapping="/**.txt"/>
 	<mvc:resources location="/MP_verify_wCxELkUZPn1pjq5y.txt" mapping="/MP_verify_wCxELkUZPn1pjq5y.txt"/>
 	
 	<!-- 加载配置文件 -->
@@ -31,6 +37,7 @@
 	</bean>
 	<!-- 注解 -->
 	<context:component-scan base-package="com.chnghx.web.*.controller" />
+	<context:component-scan base-package="com.chnghx.web.websocket.*" />
 	<!--配置文件加载路径 -->
 	<context:component-scan base-package="com.chnghx.web.common.properties" />
 	<bean id="springContextUtil" class="com.chnghx.web.common.SpringContextUtil"

@@ -1,4 +1,4 @@
-package com.chnghx.web.index.controller;
+package com.chnghx.web.demo.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,7 +24,7 @@ public class IndexController extends BaseController{
 	
 	@RequestMapping(value="index")
 	public ModelAndView index1(HttpServletRequest request, HttpServletResponse response){
-		ModelAndView view = new ModelAndView("index/index");
+		ModelAndView view = new ModelAndView("demo/index/index");
 		return view;
 	}
 	
