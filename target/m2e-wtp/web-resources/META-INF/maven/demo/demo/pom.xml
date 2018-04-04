@@ -37,7 +37,7 @@
 						<configuration>
 							<tasks>
 								<echo message="**************ant package******************" />
-								<jar destfile="${project.build.directory}/vinux-api-1.0.0.jar"
+								<jar destfile="${project.build.directory}/chnghx-1.0.0.jar"
 									basedir="${project.build.directory}/classes" excludes="**.xml,**.pro**" />
 							</tasks>
 						</configuration>
