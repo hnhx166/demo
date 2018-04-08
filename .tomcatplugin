@@ -30,7 +30,7 @@
         <webClassPathEntry>D:/maven/repository/com/sun/jersey/jersey-server/1.19/jersey-server-1.19.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/com/thoughtworks/xstream/xstream/1.4.9/xstream-1.4.9.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-beanutils/commons-beanutils-core/1.8.3/commons-beanutils-core-1.8.3.jar</webClassPathEntry>
-        <webClassPathEntry>D:/maven/repository/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-codec/commons-codec/1.8/commons-codec-1.8.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar</webClassPathEntry>
@@ -64,6 +64,13 @@
         <webClassPathEntry>D:/maven/repository/org/apache/oltu/oauth2/org.apache.oltu.oauth2.dynamicreg.server/1.0.0/org.apache.oltu.oauth2.dynamicreg.server-1.0.0.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/apache/oltu/oauth2/org.apache.oltu.oauth2.resourceserver-filter/1.0.0/org.apache.oltu.oauth2.resourceserver-filter-1.0.0.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/apache/oltu/oauth2/org.apache.oltu.oauth2.resourceserver/1.0.0/org.apache.oltu.oauth2.resourceserver-1.0.0.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/apache/shiro/shiro-aspectj/1.3.2/shiro-aspectj-1.3.2.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/apache/shiro/shiro-cas/1.3.2/shiro-cas-1.3.2.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/apache/shiro/shiro-spring/1.3.2/shiro-spring-1.3.2.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/apache/shiro/shiro-web/1.3.2/shiro-web-1.3.2.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/aspectj/aspectjrt/1.8.6/aspectjrt-1.8.6.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/aspectj/aspectjweaver/1.8.6/aspectjweaver-1.8.6.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/eclipse/jetty/jetty-http/9.3.19.v20170502/jetty-http-9.3.19.v20170502.jar</webClassPathEntry>
@@ -74,6 +81,7 @@
         <webClassPathEntry>D:/maven/repository/org/freemarker/freemarker/2.3.20/freemarker-2.3.20.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/fusesource/leveldbjni/leveldbjni-all/1.8/leveldbjni-all-1.8.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/jasig/cas/client/cas-client-core/3.2.2/cas-client-core-3.2.2.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/java-websocket/Java-WebSocket/1.3.4/Java-WebSocket-1.3.4.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/json/json/20131018/json-20131018.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/slf4j/jcl-over-slf4j/1.7.21/jcl-over-slf4j-1.7.21.jar</webClassPathEntry>

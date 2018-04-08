@@ -18,7 +18,13 @@
 		<property name="maxWaitMillis" value="${redis.maxWait}" /><!-- 最大等待 -->
 		<property name="testOnBorrow" value="${redis.testOnBorrow}" /><!-- 在获取连接的时候检查有效性, 默认false -->
 	</bean>
-
+	
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg index="0" ref="jedisPoolConfig"/>
+        <constructor-arg index="1" value="${redis.host}"/>
+        <constructor-arg index="2" value="${redis.port}"/>
+        <constructor-arg index="3" value="5000"/>
+    </bean>
 
 	<bean id="jedisConnFactory"
 		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
