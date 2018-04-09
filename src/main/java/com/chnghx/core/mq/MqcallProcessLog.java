@@ -16,7 +16,6 @@ public class MqcallProcessLog {
 	
 	 */
 	public static void sendProcessLog(SystemLog systemLog) {
-
 		MqEntity<SystemLog> entity = new MqEntity<SystemLog>();
 		entity.setObject(systemLog);
 		entity.setType(systemLog.getSystemType());

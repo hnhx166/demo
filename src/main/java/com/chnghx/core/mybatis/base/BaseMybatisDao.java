@@ -21,7 +21,6 @@ import com.chnghx.core.mybatis.page.Pagination;
 import com.chnghx.web.common.utils.LoggerUtils;
 import com.chnghx.web.common.utils.StringUtils;
 
-
 /**
  * 
  * 基础Mybatis分页Dao
@@ -203,9 +202,7 @@ public class BaseMybatisDao<T> extends SqlSessionDaoSupport {
 		}
 		try {
 			Connection conn = this.getSqlSession().getConnection();
-
 			List resultList = this.getSqlSession().selectList(sqlId, params);
-
 			page.setList(resultList);
 
 			/**

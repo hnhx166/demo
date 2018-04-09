@@ -19,7 +19,6 @@ public class Producer extends EndPoint implements Runnable {
 	}
 	
 	public Producer(Object obj,String routingKey) {
-
 		super("");
 		this.routingKey = routingKey;
 		this.obj = obj;

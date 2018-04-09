@@ -15,7 +15,17 @@
 							</ul>
 						</li>
 						<li><a href="/socket/chat">websocket 聊天</a></li>
-						<li><a href="javascript:void(0);">菜单</a></li>
+						<li>
+							<a href="javascript:void(0);">echarts图表</a>
+							<ul>
+								<li><a href="/charts/line-x">基本线型图表</a></li>
+								<li><a href="/charts/line-mutil-x">Multiple X Axes</a></li>
+								<li><a href="/charts/line-y">Line Y Category</a></li>
+								<li><a href="/charts/tree-x">tree-x</a></li>
+								<li><a href="/charts/tree-y">tree-y</a></li>
+								<li><a href="/charts/tree-mutil">tree-mutil</a></li>
+							</ul>
+						</li>
 						<li><a href="javascript:void(0);">菜单</a></li>
 						<li><a href="javascript:void(0);">菜单</a></li>
 						<li><a href="javascript:void(0);">菜单</a></li>

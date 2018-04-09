@@ -20,10 +20,7 @@ public abstract class EndPoint {
 	//接收消息，转发消息到绑定的队列。四种类型：direct, topic, headers and fanout。topic：按规则转发消息（最灵活）。
 	protected static final String exchangeType = "topic";
 	
-	
-
 	public EndPoint(String queueName) {
-		
 		this.queueName = queueName;
 
 		// Create a connection factory
@@ -49,18 +46,9 @@ public abstract class EndPoint {
 		factory.setRequestedHeartbeat(5);// 5秒心跳保持连接
 		try {
 			if (null==connection || !connection.isOpen()) {
-
 				String ipNext = Config.getProperty("mq.next.ip");
-				//String nameNext = Config.getProperty("mq.next.name");
-				//String pswdNext = Config.getProperty("mq.next.pswd");
-				//String scopeNext = Config.getProperty("mq.next.scope");
-				//String messageNext = "当前备用MQ获取的参数:ip[%s],name[%s],pswd[%s],scope[%s],queueName[%s]";
-				
-				//(getClass(), String.format(messageNext, ipNext, nameNext, pswdNext, scopeNext,queueName));
-
 				Address[] addresses = { new Address(ipNext) };
 				connection = factory.newConnection(addresses);
-				
 			}
 			
 			if (null==channel || !channel.isOpen()) {
@@ -75,7 +63,6 @@ public abstract class EndPoint {
 			}
 			
 		} catch (Exception e) {
-			
 			String errorStr = "队列初始化异常：" + e;
 			LoggerUtils.error(getClass(), errorStr);
 		}
@@ -87,7 +74,6 @@ public abstract class EndPoint {
 	 * @throws IOException
 	 */
 	public void close() throws IOException {
-		
 		channel.close();
 		connection.close();
 	}

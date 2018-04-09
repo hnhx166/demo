@@ -7,28 +7,22 @@ import java.util.concurrent.Executors;
 
 import com.chnghx.core.mq.bo.MqEntity;
 
-
 public class MqPublicInfo {
 
 	// 1：指定队列名称生产和消费消息
 	public static void processMsg(Object obj, String queueName) {
-
 		// 生产者
 		Producer producer = new Producer(queueName, obj);
-
 		// 消费者
 		QueueConsumer consumer = new QueueConsumer(queueName);
-
 		// 线程池方式
 		ExecutorService service = Executors.newCachedThreadPool();
-
 		service.submit(consumer);
 		service.submit(producer);
 	}
 
 	// 2：指定队列名称生产消息
 	public static void producerMsg(Object obj, String queueName) {
-
 		// 生产者
 		Producer producer = new Producer(queueName, obj);
 		// 线程池方式
@@ -38,7 +32,6 @@ public class MqPublicInfo {
 
 	// 3：指定队列名称消费消息
 	public static void consumerMsg(String queueName) {
-
 		// 消费者
 		QueueConsumer consumer = new QueueConsumer(queueName);
 		// 线程池方式
@@ -48,7 +41,6 @@ public class MqPublicInfo {
 	
 	// 4：指定路由key发布消息
 	public static void publishMsg(Object obj,String routingKey) {
-
 		// 生产者
 		Producer producer = new Producer(obj,routingKey);
 		// 线程池方式

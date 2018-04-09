@@ -2,80 +2,79 @@ package com.chnghx.core.mq.bo;
 
 import java.io.Serializable;
 import java.util.Date;
- /**
+
+/**
  * 系统日志BO
  *
  */
-public class SystemLog implements Serializable{
-    /**
+public class SystemLog implements Serializable {
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 7913370117433376949L;
-    //第三方请求url
-    private String url;
-    //第三方请求参数
-    private String param;
-    //第三方返回结果
-    private String result;
-    //创建时间
-    private Long time;
-    //创建日期
-    private Date dateTime;
-    
-    
-    //local执行class名称
-    private String className;
-    //local执行method名称
-    private String methodName;
-    //local执行method参数
-    private String methodParam;
-    //local执行method结果
-    private String methodMessage;
-    
-    //数据处理方式
-    private String dealType;
-    //各个系统编号
-    private String systemType;
-    //系统具体小业务流程
-    private String businessType;
-    //主键或者索引ID
-    private String indexID;
-    //其他属性字段
-    private String other;
-    
-    
-    public String getUrl() {
-        return url;
-    }
+	// 第三方请求url
+	private String url;
+	// 第三方请求参数
+	private String param;
+	// 第三方返回结果
+	private String result;
+	// 创建时间
+	private Long time;
+	// 创建日期
+	private Date dateTime;
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	// local执行class名称
+	private String className;
+	// local执行method名称
+	private String methodName;
+	// local执行method参数
+	private String methodParam;
+	// local执行method结果
+	private String methodMessage;
 
-    public String getParam() {
-        return param;
-    }
+	// 数据处理方式
+	private String dealType;
+	// 各个系统编号
+	private String systemType;
+	// 系统具体小业务流程
+	private String businessType;
+	// 主键或者索引ID
+	private String indexID;
+	// 其他属性字段
+	private String other;
 
-    public void setParam(String param) {
-        this.param = param;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public String getResult() {
-        return result;
-    }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-    public void setResult(String result) {
-        this.result = result;
-    }
-    
-    public Long getTime() {
-        return time;
-    }
+	public String getParam() {
+		return param;
+	}
 
-    public void setTime(Long time) {
-        this.time = time;
-    }
-    
+	public void setParam(String param) {
+		this.param = param;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+	public Long getTime() {
+		return time;
+	}
+
+	public void setTime(Long time) {
+		this.time = time;
+	}
+
 	public Date getDateTime() {
 		return dateTime;
 	}
@@ -85,40 +84,38 @@ public class SystemLog implements Serializable{
 	}
 
 	public String getClassName() {
-        return className;
-    }
+		return className;
+	}
 
-    public void setClassName(String className) {
-        this.className = className;
-    }
+	public void setClassName(String className) {
+		this.className = className;
+	}
 
-    public String getMethodName() {
-        return methodName;
-    }
+	public String getMethodName() {
+		return methodName;
+	}
 
-    public void setMethodName(String methodName) {
-        this.methodName = methodName;
-    }
+	public void setMethodName(String methodName) {
+		this.methodName = methodName;
+	}
 
-    public String getMethodParam() {
-        return methodParam;
-    }
+	public String getMethodParam() {
+		return methodParam;
+	}
 
-    public void setMethodParam(String methodParam) {
-        this.methodParam = methodParam;
-    }
+	public void setMethodParam(String methodParam) {
+		this.methodParam = methodParam;
+	}
 
-    public String getMethodMessage() {
-        return methodMessage;
-    }
+	public String getMethodMessage() {
+		return methodMessage;
+	}
 
-    public void setMethodMessage(String methodMessage) {
-        this.methodMessage = methodMessage;
-    }
+	public void setMethodMessage(String methodMessage) {
+		this.methodMessage = methodMessage;
+	}
 
-   
-
-    public String getDealType() {
+	public String getDealType() {
 		return dealType;
 	}
 
@@ -151,10 +148,10 @@ public class SystemLog implements Serializable{
 	}
 
 	public String getOther() {
-        return other;
-    }
+		return other;
+	}
 
-    public void setOther(String other) {
-        this.other = other;
-    }
+	public void setOther(String other) {
+		this.other = other;
+	}
 }

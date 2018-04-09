@@ -11,6 +11,7 @@
     <mavenClasspath>false</mavenClasspath>
     <webPath></webPath>
     <webClassPathEntries>
+        <webClassPathEntry>/demo/src/main/webapp/WEB-INF/lib/pinyin4j-2.5.0.jar</webClassPathEntry>
         <webClassPathEntry>/demo/target/classes</webClassPathEntry>
         <webClassPathEntry>/demo/target/test-classes</webClassPathEntry>
         <webClassPathEntry>D:/jee-oxygen2/eclipse-workspace/demo/src/main/webapp/WEB-INF/lib/com.vinux.security.jar</webClassPathEntry>
@@ -35,6 +36,7 @@
         <webClassPathEntry>D:/maven/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-codec/commons-codec/1.8/commons-codec-1.8.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/commons-configuration/commons-configuration/1.8/commons-configuration-1.8.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-daemon/commons-daemon/1.0.13/commons-daemon-1.0.13.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-fileupload/commons-fileupload/1.2.2/commons-fileupload-1.2.2.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar</webClassPathEntry>
