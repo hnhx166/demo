@@ -17,6 +17,7 @@
         <webClassPathEntry>D:/jee-oxygen2/eclipse-workspace/demo/src/main/webapp/WEB-INF/lib/hessian-https-4.0.33.jar</webClassPathEntry>
         <webClassPathEntry>D:/jee-oxygen2/eclipse-workspace/demo/src/main/webapp/WEB-INF/lib/member-api-1.0.0.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/com/alibaba/druid/1.0.15/druid-1.0.15.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/com/alibaba/fastjson/1.1.26/fastjson-1.1.26.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/com/fasterxml/jackson/core/jackson-annotations/2.7.0/jackson-annotations-2.7.0.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/com/fasterxml/jackson/core/jackson-core/2.7.8/jackson-core-2.7.8.jar</webClassPathEntry>
@@ -49,6 +50,7 @@
         <webClassPathEntry>D:/maven/repository/javax/ws/rs/jsr311-api/1.1.1/jsr311-api-1.1.1.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/junit/junit/4.12/junit-4.12.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/net/sf/json-lib/json-lib/2.4/json-lib-2.4-jdk15.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar</webClassPathEntry>
@@ -70,7 +72,7 @@
         <webClassPathEntry>D:/maven/repository/org/apache/shiro/shiro-spring/1.3.2/shiro-spring-1.3.2.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/apache/shiro/shiro-web/1.3.2/shiro-web-1.3.2.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/aspectj/aspectjrt/1.8.6/aspectjrt-1.8.6.jar</webClassPathEntry>
-        <webClassPathEntry>D:/maven/repository/org/aspectj/aspectjweaver/1.8.6/aspectjweaver-1.8.6.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/aspectj/aspectjweaver/1.7.1/aspectjweaver-1.7.1.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.11/jackson-mapper-asl-1.9.11.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/eclipse/jetty/jetty-http/9.3.19.v20170502/jetty-http-9.3.19.v20170502.jar</webClassPathEntry>
@@ -84,6 +86,8 @@
         <webClassPathEntry>D:/maven/repository/org/jasig/cas/client/cas-client-core/3.2.2/cas-client-core-3.2.2.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/java-websocket/Java-WebSocket/1.3.4/Java-WebSocket-1.3.4.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/json/json/20131018/json-20131018.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/mybatis/mybatis-spring/1.1.1/mybatis-spring-1.1.1.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/mybatis/mybatis/3.2.0/mybatis-3.2.0.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/slf4j/jcl-over-slf4j/1.7.21/jcl-over-slf4j-1.7.21.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/slf4j/slf4j-log4j12/1.7.2/slf4j-log4j12-1.7.2.jar</webClassPathEntry>
@@ -96,6 +100,7 @@
         <webClassPathEntry>D:/maven/repository/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/springframework/spring-expression/4.2.5.RELEASE/spring-expression-4.2.5.RELEASE.jar</webClassPathEntry>
+        <webClassPathEntry>D:/maven/repository/org/springframework/spring-jdbc/3.1.1.RELEASE/spring-jdbc-3.1.1.RELEASE.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/springframework/spring-oxm/4.2.5.RELEASE/spring-oxm-4.2.5.RELEASE.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/springframework/spring-test/4.2.5.RELEASE/spring-test-4.2.5.RELEASE.jar</webClassPathEntry>
         <webClassPathEntry>D:/maven/repository/org/springframework/spring-tx/4.2.5.RELEASE/spring-tx-4.2.5.RELEASE.jar</webClassPathEntry>
