@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<title>videojs 视频播放</title>
 	<#include "/common/header.ftl" />
 </head>
 <body style="overflow-y: hidden">

@@ -25,6 +25,10 @@ public class IndexController extends BaseController{
 	@RequestMapping(value="index")
 	public ModelAndView index1(HttpServletRequest request, HttpServletResponse response){
 		ModelAndView view = new ModelAndView("demo/index/index");
+//		String view_template = "demo/index/index";
+		String view_template = "demo/index/index";
+		
+//		view.setViewName(view_template);
 		return view;
 	}
 	

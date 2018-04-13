@@ -65,7 +65,16 @@ public class MyMessageHandler extends TextWebSocketHandler {
 	 * @param message
 	 */
 	public void sendMessageToUsers(TextMessage message) {
-		for (WebSocketSession user : users) {
+//		for (WebSocketSession user : users) {
+//			try {
+//				if (user.isOpen()) {
+//					user.sendMessage(message);
+//				}
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//		}
+		users.forEach(user -> {
 			try {
 				if (user.isOpen()) {
 					user.sendMessage(message);
@@ -73,6 +82,6 @@ public class MyMessageHandler extends TextWebSocketHandler {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}
+		});
 	}
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<title>多个树形图</title>
 	<#include "/common/header.ftl" />
 	<script type="text/javascript" src="/js/echarts/echarts.js"></script>
 	<script type="text/javascript" src="/js/echarts/echarts-gl.js"></script>

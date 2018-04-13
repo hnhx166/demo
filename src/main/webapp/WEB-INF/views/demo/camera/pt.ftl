@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+<title>navigator.mediaDevices实现调用相机</title>
 <#include "/common/header.ftl" />
 <style>
 .booth {

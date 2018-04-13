@@ -7,7 +7,6 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="keywords" content="">
 	<meta name="description" content="" />
-	<title>首页</title>
 	<meta name="description" content="www.chnghx.com" />
 	<meta name="keywords" content="www.chnghx.com" />
 	

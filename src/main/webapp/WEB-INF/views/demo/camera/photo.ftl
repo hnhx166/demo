@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<title>file控件实现调用相机并且拍照上传</title>
 	<#include "/common/header.ftl" />
 	<style>
         * {

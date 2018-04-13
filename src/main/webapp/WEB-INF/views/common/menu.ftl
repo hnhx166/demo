@@ -26,7 +26,12 @@
 								<li><a href="/charts/tree-mutil">tree-mutil</a></li>
 							</ul>
 						</li>
-						<li><a href="javascript:void(0);">菜单</a></li>
+						<li>
+							<a href="javascript:void(0);">编辑器</a>
+							<ul>
+								<li><a href="/editor/ckeditor">ckeditor</a></li>
+							</ul>
+						</li>
 						<li><a href="javascript:void(0);">菜单</a></li>
 						<li><a href="javascript:void(0);">菜单</a></li>
 						<li><a href="javascript:void(0);">菜单</a></li>

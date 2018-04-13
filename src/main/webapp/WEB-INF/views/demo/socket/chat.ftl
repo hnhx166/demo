@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<title>spring websocket</title>
 	<#include "/common/header.ftl" />
 	<script src="/js/socket/sockjs-0.3.min.js"></script>  
 	<script type="text/javascript" src="/js/demo/socket/socket.js"></script>
