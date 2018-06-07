@@ -12,6 +12,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Scope("prototype")
 @RequestMapping("charts")
 public class EchartsController {
+	
+	@RequestMapping("star")
+	public ModelAndView star(HttpServletRequest request, HttpServletResponse response) {
+		ModelAndView view = new ModelAndView("demo/charts/star");
+		
+		return view;
+	}
 
 	@RequestMapping("line-x")
 	public ModelAndView line_x(HttpServletRequest request, HttpServletResponse response) {

@@ -9,30 +9,29 @@
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<!-- 数据库链接URL、用户名、密码 -->
-		 <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.0.145:3306/vinux_vk_vitahelper?characterEncoding=utf8" userId="root" password="vinux">
+		 <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.0.145:3306/vinux_sso?characterEncoding=utf8" userId="root" password="vinux">
 		<!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="msa" password="msa"> -->
 		</jdbcConnection>
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		<!-- 生成模型的包名和位置 -->
-		<javaModelGenerator targetPackage="vinux.service.entity.catalog" targetProject="D:\jee-oxygen2\eclipse-workspace\vk.vitahelperadmin.service\src\main\java">
+		<javaModelGenerator targetPackage="com.chnghx.service.entity" targetProject="D:\jee-oxygen2\eclipse-workspace\demo\src\main\java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="extended" />
 		</javaModelGenerator>
 		<!-- 生成的映射文件包名和位置 -->
-		<sqlMapGenerator targetPackage="vinux.service.mapper.catalog" targetProject="D:\jee-oxygen2\eclipse-workspace\vk.vitahelperadmin.service\src\main\java">
+		<sqlMapGenerator targetPackage="com.chnghx.service.mapper" targetProject="D:\jee-oxygen2\eclipse-workspace\demo\src\main\java">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!-- 生成DAO的包名和位置 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="vinux.service.dao.catalog" targetProject="D:\jee-oxygen2\eclipse-workspace\vk.vitahelperadmin.service\src\main\java">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.chnghx.service.dao" targetProject="D:\jee-oxygen2\eclipse-workspace\demo\src\main\java">
 			<property name="enableSubPackages" value="true" />
 			
 		</javaClientGenerator>
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) 
 		-->
-		<table tableName="CATALOG" domainObjectName="Catalog" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
-		<table tableName="CATALOG_RELATION" domainObjectName="CatalogRelation" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
+		<table tableName="SSO_DOMAIN" domainObjectName="SsoDomain" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" />
 		
 		
 		

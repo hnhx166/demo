@@ -11,6 +11,7 @@
     <mavenClasspath>false</mavenClasspath>
     <webPath></webPath>
     <webClassPathEntries>
+        <webClassPathEntry>/demo/src/main/webapp/WEB-INF/lib/Java-WebSocket-1.3.4.jar</webClassPathEntry>
         <webClassPathEntry>/demo/src/main/webapp/WEB-INF/lib/pinyin4j-2.5.0.jar</webClassPathEntry>
         <webClassPathEntry>/demo/target/classes</webClassPathEntry>
         <webClassPathEntry>/demo/target/test-classes</webClassPathEntry>

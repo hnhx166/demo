@@ -27,7 +27,7 @@ http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd
 		<property name="properties" ref="configProperties" />
 	</bean>
 
-	<!-- <import resource="spring-mybatis.xml"/> -->
+	<import resource="spring-mybatis.xml"/>
 	<import resource="spring-shiro.xml"/>
 	<import resource="spring-redis.xml" />
 	<import resource="spring-socket.xml" />

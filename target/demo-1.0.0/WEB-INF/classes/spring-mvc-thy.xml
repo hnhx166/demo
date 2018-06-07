@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+	http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+	<context:component-scan base-package="vinux.service.api.center" />
+	<mvc:annotation-driven />
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:resources location="/images/" mapping="/images/**" />
+	<mvc:resources location="/MP_verify_wCxELkUZPn1pjq5y.txt"
+		mapping="/MP_verify_wCxELkUZPn1pjq5y.txt" />
+
+	<!-- 加载配置文件 -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="locations">
+			<list>
+				<value>classpath:*.properties</value>
+				<value>classpath:*/*.properties</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 注解 -->
+	<context:component-scan base-package="com.chnghx.web.*.controller" />
+	<!--配置文件加载路径 -->
+	<context:component-scan base-package="com.chnghx.web.common.properties" />
+	<bean id="springContextUtil" class="com.chnghx.web.common.SpringContextUtil"
+		scope="singleton" />
+
+
+	<!-- <bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="Messages" />
+	</bean> -->
+
+	<!-- 自定义格式化工具 -->
+	<!-- <bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="formatters">
+			<set>
+				<bean class="com.chnghx.core.thymeleaf.formatter.DateFormatter" />
+			</set>
+		</property>
+	</bean> -->
+
+	<!-- 模板解析器 -->
+	<bean id="templateResolver"
+		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+		<property name="prefix" value="/WEB-INF/templates/" />
+		<property name="suffix" value=".html" />
+		<property name="templateMode" value="HTML5" />
+		<property name="cacheable" value="false" />
+		<property name="characterEncoding" value="UTF-8" />
+	</bean>
+
+	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+		<property name="templateResolver" ref="templateResolver" />
+	</bean>
+
+	<bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+		<property name="templateEngine" ref="templateEngine" />
+		<property name="characterEncoding" value="UTF-8" />
+		<!-- <property name="order" value="1" /> -->
+		<!-- <property name="viewNames" value="*.html,*.xhtml" /> -->
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+		<property name="maxUploadSize">
+			<value>32505856</value><!-- 上传文件大小限制为31M，31*1024*1024 -->
+		</property>
+		<property name="maxInMemorySize">
+			<value>4096</value>
+		</property>
+	</bean>
+
+	<mvc:interceptors>
+		<!-- 标准APIResult返回方式 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/api/*/**" />
+			<bean class="com.chnghx.core.interceptor.RequestInterceptor" />
+		</mvc:interceptor>
+		<!-- IOS临时解决方案 -->
+		<mvc:interceptor>
+			<!-- 多个系统配置多个mapping -->
+			<mvc:mapping path="/vinuxcart/**" />
+			<bean class="com.chnghx.core.interceptor.MobileRequestInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+</beans>

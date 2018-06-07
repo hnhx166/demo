@@ -9,7 +9,7 @@
 			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 	<!-- 自动扫描 Service -->
-	<context:component-scan base-package="com.chnghx.web.*.service" />
+	<context:component-scan base-package="com.chnghx.service.**" />
 
 	<!-- 日志输出 -->
 	<bean id="log-filter" class="com.alibaba.druid.filter.logging.Log4jFilter">
@@ -68,7 +68,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
-		<property name="mapperLocations" value="classpath:com/chnghx/service/mapper/*/*.xml" />
+		<property name="mapperLocations" value="classpath:com/chnghx/service/mapper/*.xml" />
 	</bean>
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />

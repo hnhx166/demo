@@ -48,7 +48,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring-mvc-thy.xml,classpath:spring-remote-export.xml</param-value>
+			<param-value>classpath:spring-mvc.xml,classpath:spring-remote-export.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

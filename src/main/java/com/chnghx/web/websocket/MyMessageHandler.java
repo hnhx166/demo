@@ -74,14 +74,14 @@ public class MyMessageHandler extends TextWebSocketHandler {
 //				e.printStackTrace();
 //			}
 //		}
-		users.forEach(user -> {
-			try {
-				if (user.isOpen()) {
-					user.sendMessage(message);
-				}
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		});
+//		users.forEach(user -> {
+//			try {
+//				if (user.isOpen()) {
+//					user.sendMessage(message);
+//				}
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//		});
 	}
 }
